@@ -27,19 +27,19 @@ if page == "Welcome":
     col1, col2, col3 = st.columns(3)
     with col1:
         if st.button("Churn Prediction"):
-            st.query_params({page:"Churn Prediction"})
+            st.query_params.update({"page": "Churn Prediction"})
         if st.button("Revenue Prediction"):
-            st.query_params({page:"Revenue Prediction"})
+            st.query_params.update({"page": "Revenue Prediction"})
     with col2:
         if st.button("DAU Forecast"):
-            st.query_params({page:"DAU Forecast"})
+            st.query_params.update({"page": "DAU Forecast"})
         if st.button("Recommender System"):
-            st.query_params({page:"Recommender System"})
+            st.query_params.update({"page": "Recommender System"})
     with col3:
         if st.button("Lootbox Simulation"):
-            st.query_params({page:"Lootbox Simulation"})
+            st.query_params.update({"page": "Lootbox Simulation"})
         if st.button("Customer Segmentation"):
-            st.query_params({page:"Customer Segmentation"})
+            st.query_params.update({"page": "Customer Segmentation"})
 
 elif page == "Churn Prediction":
     st.title("Churn Prediction Model")
