@@ -1,4 +1,5 @@
 import streamlit as st
+from welcome_page import show_welcome_page
 from churn_prediction import show_churn_prediction
 from revenue_prediction import show_revenue_prediction
 # from dau_forecast import show_dau_forecast
@@ -15,25 +16,7 @@ page = st.sidebar.radio("Go to", ["Welcome", "Churn Prediction", "Revenue Predic
 
 # Main content
 if page == "Welcome":
-    st.title("Welcome to My Machine Learning Portfolio")
-    st.write("This app showcases various machine learning models and techniques. Click on a model below to explore!")
-
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        if st.button("Churn Prediction"):
-            st.experimental_set_query_params(page="Churn Prediction")
-        if st.button("Revenue Prediction"):
-            st.experimental_set_query_params(page="Revenue Prediction")
-    with col2:
-        if st.button("DAU Forecast"):
-            st.experimental_set_query_params(page="DAU Forecast")
-        if st.button("Recommender System"):
-            st.experimental_set_query_params(page="Recommender System")
-    with col3:
-        if st.button("Lootbox Simulation"):
-            st.experimental_set_query_params(page="Lootbox Simulation")
-        if st.button("Customer Segmentation"):
-            st.experimental_set_query_params(page="Customer Segmentation")
+    show_welcome_page()
 
 elif page == "Churn Prediction":
     show_churn_prediction()
