@@ -17,49 +17,34 @@ def show_welcome_page():
     col1, col2, col3 = st.columns(3)
     with col1:
         st.subheader("Programming")
-        st.write("- Python\n- R\n- SQL")
+        st.write("- Python (VSC)\n- R\n- Snowflake SQL")
     with col2:
-        st.subheader("ML / DL")
-        st.write("- Scikit-learn\n- TensorFlow\n- PyTorch")
+        st.subheader("Visualization")
+        st.write("- PowerBI\n- Tableau\n- Looker")
     with col3:
-        st.subheader("Tools")
-        st.write("- Git\n- Docker\n- AWS")
+        st.subheader("Gaming Specific")
+        st.write("- Game Design\n- Market Knowledge\n- Trends & Personal interest")
 
-    # Projects overview
-    st.header("Projects Overview")
-    st.write("Click on a project to explore it in detail:")
 
+    st.header('Overview of Video Games I have applied my models in')
     col1, col2 = st.columns(2)
     with col1:
-        st.subheader("[Churn Prediction](/?page=Churn+Prediction)")
-        st.write("Predict customer churn using classification models.")
-        
-        st.subheader("[Revenue Prediction](/?page=Revenue+Prediction)")
-        st.write("Forecast revenue using regression techniques.")
-        
-        st.subheader("[DAU Forecast](/?page=DAU+Forecast)")
-        st.write("Predict Daily Active Users using time series analysis.")
-    
+        st.subheader('Wargaming')
+        st.write('- World of Tanks\n- Unannounced Project')
     with col2:
-        st.subheader("[Recommender System](/?page=Recommender+System)")
-        st.write("Movie recommendations using collaborative filtering.")
-        
-        st.subheader("[Lootbox Simulation](/?page=Lootbox+Simulation)")
-        st.write("Simulate lootbox mechanics and analyze probabilities.")
-        
-        st.subheader("[Customer Segmentation](/?page=Customer+Segmentation)")
-        st.write("Segment customers using clustering algorithms.")
+        st.subheader('InnoGames')
+        st.write('- Forge of Empires\n- Rise of Cultures\n- Elvenar')
+
 
     # Contact information
     st.header("Contact Me")
     st.write("""
-    - Email: your.email@example.com
-    - LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/yourprofile)
-    - GitHub: [Your GitHub Profile](https://github.com/yourusername)
+    - Email: chaloudis.th@gmail.com
+    - LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/achaloudis)
     """)
 
     # Optional: Add a call-to-action
-    st.button("Download Resume", on_click=lambda: st.markdown("[Download Resume](link_to_your_resume.pdf)"))
+    st.button("Download Resume", on_click=lambda: st.markdown("[Download Resume](https://drive.google.com/file/d/13ZOzc3LWLf4NK3UFhV4a3RTLLLtTO0ge/view)"))
 
 if __name__ == "__main__":
     show_welcome_page()
