@@ -1,16 +1,10 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
-from sklearn.linear_model import LinearRegression
-import xgboost as xgb
-# from fbprophet import Prophet
-from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.cluster import KMeans
-from sklearn.preprocessing import StandardScaler
+from churn_prediction import show_churn_prediction
+from revenue_prediction import show_revenue_prediction
+from dau_forecast import show_dau_forecast
+from recommender_system import show_recommender_system
+from lootbox_simulation import show_lootbox_simulation
+from customer_segmentation import show_customer_segmentation
 
 # Set page config
 st.set_page_config(page_title="ML Model Portfolio", layout="wide")
@@ -27,43 +21,37 @@ if page == "Welcome":
     col1, col2, col3 = st.columns(3)
     with col1:
         if st.button("Churn Prediction"):
-            st.query_params.update({"page": "Churn Prediction"})
+            st.experimental_set_query_params(page="Churn Prediction")
         if st.button("Revenue Prediction"):
-            st.query_params.update({"page": "Revenue Prediction"})
+            st.experimental_set_query_params(page="Revenue Prediction")
     with col2:
         if st.button("DAU Forecast"):
-            st.query_params.update({"page": "DAU Forecast"})
+            st.experimental_set_query_params(page="DAU Forecast")
         if st.button("Recommender System"):
-            st.query_params.update({"page": "Recommender System"})
+            st.experimental_set_query_params(page="Recommender System")
     with col3:
         if st.button("Lootbox Simulation"):
-            st.query_params.update({"page": "Lootbox Simulation"})
+            st.experimental_set_query_params(page="Lootbox Simulation")
         if st.button("Customer Segmentation"):
-            st.query_params.update({"page": "Customer Segmentation"})
+            st.experimental_set_query_params(page="Customer Segmentation")
 
 elif page == "Churn Prediction":
-    st.title("Churn Prediction Model")
-    # Churn prediction code here
+    show_churn_prediction()
 
 elif page == "Revenue Prediction":
-    st.title("Revenue Prediction Model")
-    # Revenue prediction code here
+    show_revenue_prediction()
 
 elif page == "DAU Forecast":
-    st.title("Daily Active Users (DAU) Forecast")
-    # DAU forecast code here
+    show_dau_forecast()
 
 elif page == "Recommender System":
-    st.title("Movie Recommender System")
-    # Recommender system code here
+    show_recommender_system()
 
 elif page == "Lootbox Simulation":
-    st.title("Lootbox Simulation")
-    # Lootbox simulation code here
+    show_lootbox_simulation()
 
 elif page == "Customer Segmentation":
-    st.title("Customer Segmentation")
-    # Customer segmentation code here
+    show_customer_segmentation()
 
 # Add any global styles or custom CSS here
 st.markdown("""
