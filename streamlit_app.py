@@ -1,7 +1,7 @@
 import streamlit as st
 from churn_prediction import show_churn_prediction
 from revenue_prediction import show_revenue_prediction
-from dau_forecast import show_dau_forecast
+# from dau_forecast import show_dau_forecast
 from recommender_system import show_recommender_system
 from lootbox_simulation import show_lootbox_simulation
 from customer_segmentation import show_customer_segmentation
@@ -41,8 +41,8 @@ elif page == "Churn Prediction":
 elif page == "Revenue Prediction":
     show_revenue_prediction()
 
-elif page == "DAU Forecast":
-    show_dau_forecast()
+# elif page == "DAU Forecast":
+#     show_dau_forecast()
 
 elif page == "Recommender System":
     show_recommender_system()
